@@ -1,2 +1,3 @@
 # linkshelf
-Chrome Extension for Managing Bookmarks Wisely.
+
+> Chrome Extension for Managing Bookmarks Wisely.

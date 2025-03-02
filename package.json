@@ -5,7 +5,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "commitlint": "commitlint --edit",
-    "postinstall": "husky && bash init-husky-script.sh"
+    "postinstall": "husky && bash init-commit-script.sh"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --fix"

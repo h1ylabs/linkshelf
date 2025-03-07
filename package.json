@@ -1,6 +1,13 @@
 {
+  "name": "linkshelf",
+  "version": "0.1.0",
+  "description": "Chrome Extension for Managing Bookmarks Wisely.",
+  "author": "cutehammond772",
+  "license": "MIT",
+  "type": "module",
   "packageManager": "yarn@4.6.0",
   "scripts": {
+    "build": "vite build",
     "add:shadcn": "yarn dlx shadcn@latest add",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
@@ -29,6 +36,7 @@
     "@eslint/js": "^9.21.0",
     "@stylistic/eslint-plugin": "^4.1.0",
     "@tailwindcss/vite": "^4.0.9",
+    "@types/chrome": "^0.0.307",
     "@types/eslint-plugin-jsx-a11y": "^6",
     "@types/node": "^22.13.8",
     "@types/react": "^19",

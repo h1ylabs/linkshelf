@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "manifest_version": 3,
+  "name": "Linkshelf",
+  "version": "0.1.0",
+  "description": "Chrome Extension for Managing Bookmarks Wisely.",
+  "icons": {
+    "128": "icons/logo.png"
+  },
+  "action": {
+    "default_popup": "action.html",
+    "default_title": "Linkshelf",
+    "default_icon": {
+      "128": "icons/logo.png"
+    }
+  },
+  "permissions": ["storage", "activeTab"]
+}

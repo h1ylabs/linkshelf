@@ -91,7 +91,7 @@ export default ts.config(
 
   // Ignore
   {
-    ignores: ["**/node_modules/**", "eslint.config.mjs"],
+    ignores: ["node_modules/**", "build/**", "eslint.config.mjs"],
   },
 
   // Linter

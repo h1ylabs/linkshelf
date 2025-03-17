@@ -1,6 +1,7 @@
 import { fixupPluginRules } from "@eslint/compat";
 import js from "@eslint/js";
 import stylisticPlugin from "@stylistic/eslint-plugin";
+import reactQueryPlugin from "@tanstack/eslint-plugin-query";
 import importXPlugin from "eslint-plugin-import-x";
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 import reactPlugin from "eslint-plugin-react";
@@ -18,6 +19,7 @@ export default ts.config(
   ...ts.configs.recommended,
   importXPlugin.flatConfigs.recommended,
   importXPlugin.flatConfigs.typescript,
+  ...reactQueryPlugin.configs["flat/recommended"],
 
   // A11Y for Components
   {
@@ -91,7 +93,7 @@ export default ts.config(
 
   // Ignore
   {
-    ignores: ["node_modules/**", "build/**", "eslint.config.mjs"],
+    ignores: ["node_modules/**", "build/**", "*.config.mjs"],
   },
 
   // Linter
@@ -155,5 +157,5 @@ export default ts.config(
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
     },
-  }
+  },
 );

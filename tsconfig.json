@@ -2,6 +2,9 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
+    "types": [
+      "vitest/globals"
+    ],
     "lib": [
       "ES2020",
       "DOM",
@@ -31,5 +34,6 @@
     "entities",
     "features",
     "shared",
+    "tests",
   ]
 }

@@ -1,6 +1,5 @@
+import { type Theme } from "@client/shared/types/theme";
 import { createContext } from "react";
-
-import { type Theme } from "@/shared/types/theme";
 
 export type ThemeProviderState = {
   theme: Theme;

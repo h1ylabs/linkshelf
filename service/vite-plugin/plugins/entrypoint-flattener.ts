@@ -1,6 +1,6 @@
 import { Plugin } from "vite";
 
-import * as logger from "../../../shared/lib/logger";
+import * as logger from "../../logger";
 
 const HTML_ENTRYPOINT = "index.html";
 
@@ -23,7 +23,9 @@ export default function entrypointFlattener(): Plugin {
           return;
         }
 
-        bundle[entrypoint].fileName = `${entryName}.html`;
+        const entrypointName = entryName.substring(1, entryName.length - 1);
+
+        bundle[entrypoint].fileName = `${entrypointName}.html`;
       });
     },
   };

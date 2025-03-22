@@ -1,12 +1,12 @@
-/* eslint import-x/no-nodejs-modules: ["off"] */
 import fs from "node:fs";
 import path from "node:path";
 
 import { Plugin } from "vite";
 
-import * as logger from "../../../shared/lib/logger";
+import * as logger from "../../logger";
 
 const HTML_ENTRYPOINT = "index.html";
+const ENTRYPOINT_DIRECTORY = "client/app";
 
 export default function entrypointDetector(): Plugin {
   return {
@@ -16,13 +16,18 @@ export default function entrypointDetector(): Plugin {
 
     options(options) {
       const entryDirectories = fs
-        .readdirSync(path.resolve("pages"), {
+        .readdirSync(path.resolve(ENTRYPOINT_DIRECTORY), {
           withFileTypes: true,
         })
-        .filter((file) => file.isDirectory());
+        .filter((file) => file.isDirectory())
+        .filter((file) => file.name.match(/^\([A-Za-z0-9]+\)$/));
 
       const entrypoints = entryDirectories.reduce((result, entry) => {
-        const htmlPath = path.resolve("pages", entry.name, HTML_ENTRYPOINT);
+        const htmlPath = path.resolve(
+          ENTRYPOINT_DIRECTORY,
+          entry.name,
+          HTML_ENTRYPOINT,
+        );
 
         if (fs.existsSync(htmlPath)) {
           return {
@@ -35,7 +40,7 @@ export default function entrypointDetector(): Plugin {
       }, {});
 
       logger.info(
-        `Found EntryPoints: [${Object.keys(entrypoints).join(", ")}]`,
+        `Found entrypoints: [${Object.keys(entrypoints).join(", ")}]`,
       );
 
       return {

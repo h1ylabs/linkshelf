@@ -3,7 +3,8 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "types": [
-      "vitest/globals"
+      "vitest/globals",
+      "chrome"
     ],
     "lib": [
       "ES2020",
@@ -24,16 +25,18 @@
     /* Paths */
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@client/*": [
+        "client/*"
+      ],
+      "@service/*": [
+        "service/*"
+      ],
     }
   },
   "include": [
-    "pages",
-    "entities",
-    "features",
-    "shared",
+    "client",
+    "service",
     "tests",
+    "vite.config.ts"
   ]
 }

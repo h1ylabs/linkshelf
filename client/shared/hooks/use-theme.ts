@@ -1,6 +1,5 @@
+import { ThemeProviderContext } from "@client/shared/stores/theme";
 import { useContext } from "react";
-
-import { ThemeProviderContext } from "@/shared/stores/theme";
 
 
 export default function useTheme() {

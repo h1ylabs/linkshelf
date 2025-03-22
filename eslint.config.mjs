@@ -113,7 +113,8 @@ export default ts.config(
     },
     rules: {
       "import-x/no-dynamic-require": "warn",
-      "import-x/no-nodejs-modules": "warn",
+      "react-refresh/only-export-components": "off",
+      "import-x/no-nodejs-modules": "off",
 
       ...readableTailwindPlugin.configs.warning.rules,
       ...readableTailwindPlugin.configs.error.rules,

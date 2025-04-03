@@ -1,6 +1,7 @@
 import "@frontend/app/styles/globals.css";
 
 import { Logger, logger as base } from "@core/utils/logger";
+import { QueryProvider } from "@frontend/app/providers/query-provider";
 import { ThemeProvider } from "@frontend/app/providers/theme-provider";
 import App from "@frontend/pages/action";
 import { StrictMode } from "react";
@@ -13,7 +14,9 @@ if (root) {
   createRoot(root).render(
     <StrictMode>
       <ThemeProvider>
-        <App />
+        <QueryProvider>
+          <App />
+        </QueryProvider>
       </ThemeProvider>
     </StrictMode>,
   );

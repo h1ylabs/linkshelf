@@ -1,6 +1,6 @@
 import { cn } from "@frontend/shared/lib/utils";
 
-export default function Logo({
+function Logo({
   alt = "Logo Of Linkshelf", className, width = 24, height = 24, ...props
 }: Omit<React.ComponentProps<"img">, "src">) {
   return (
@@ -14,3 +14,5 @@ export default function Logo({
     />
   );
 }
+
+export { Logo };

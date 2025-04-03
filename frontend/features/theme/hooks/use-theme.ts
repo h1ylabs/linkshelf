@@ -1,6 +1,6 @@
-import { ThemeProviderContext } from "@frontend/shared/stores/theme";
 import { useContext } from "react";
 
+import { ThemeProviderContext } from "../stores";
 
 export default function useTheme() {
   const context = useContext(ThemeProviderContext);

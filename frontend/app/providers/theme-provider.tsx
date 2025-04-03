@@ -1,5 +1,4 @@
-import { ThemeProviderContext } from "@frontend/shared/stores/theme";
-import { type Theme } from "@frontend/shared/types/theme";
+import { type Theme, ThemeProviderContext } from "@frontend/features/theme";
 import { useEffect, useState } from "react";
 
 type ThemeProviderProps = {

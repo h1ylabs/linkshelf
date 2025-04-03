@@ -1,5 +1,6 @@
-import { type Theme } from "@frontend/shared/types/theme";
 import { createContext } from "react";
+
+import { type Theme } from "../types";
 
 export type ThemeProviderState = {
   theme: Theme;

@@ -1,12 +1,12 @@
-import Logo from "@frontend/shared/components/logo";
-import { Badge } from "@frontend/shared/components/ui/badge";
-import { Button } from "@frontend/shared/components/ui/button";
 import {
+  Badge,
+  Button,
+  Logo,
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@frontend/shared/components/ui/tooltip";
+} from "@frontend/shared/ui";
 import { SettingsIcon } from "lucide-react";
 
 export default function PopupHeader() {

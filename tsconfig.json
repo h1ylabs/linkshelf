@@ -25,18 +25,22 @@
     /* Paths */
     "baseUrl": ".",
     "paths": {
-      "@client/*": [
-        "client/*"
+      "@frontend/*": [
+        "frontend/*"
       ],
-      "@service/*": [
-        "service/*"
+      "@backend/*": [
+        "backend/*"
+      ],
+      "@core/*": [
+        "core/*"
       ],
     }
   },
   "include": [
-    "client",
-    "service",
-    "tests",
+    "frontend",
+    "backend",
+    "core",
+    "test",
     "vite.config.ts"
   ]
 }

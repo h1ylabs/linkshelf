@@ -1,0 +1,1 @@
+export { default as defaultQueryKey } from "./query-key";

@@ -1,0 +1,1 @@
+export { default as useCurrentTab } from "./use-current-tab";

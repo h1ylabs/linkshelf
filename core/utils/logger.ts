@@ -5,7 +5,7 @@ type LoggerOutput = {
 };
 
 export class Logger {
-  private readonly prefixes: string[];
+  public readonly prefixes: string[];
   private readonly totalPrefix: string;
 
   /**
@@ -17,11 +17,8 @@ export class Logger {
     error: console.error,
   };
 
-  constructor(
-    private readonly baseLogger: Logger = logger,
-    ...additionalPrefix: string[]
-  ) {
-    this.prefixes = [...(this.baseLogger?.prefixes ?? []), ...additionalPrefix];
+  constructor(...prefixes: string[]) {
+    this.prefixes = prefixes;
     this.totalPrefix = this.prefixes.map((prefix) => `/${prefix}`).join("");
   }
 

@@ -7,6 +7,10 @@
   "icons": {
     "128": "icons/logo.png"
   },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
   "action": {
     "default_popup": "action.html",
     "default_title": "Linkshelf",
@@ -16,6 +20,7 @@
   },
   "permissions": [
     "storage",
+    "tabs",
     "activeTab",
     "unlimitedStorage"
   ]

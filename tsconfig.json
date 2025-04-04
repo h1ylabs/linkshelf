@@ -41,6 +41,7 @@
     "backend",
     "core",
     "test",
-    "vite.config.ts"
+    "vite.config.ts",
+    "build.config.ts"
   ]
 }

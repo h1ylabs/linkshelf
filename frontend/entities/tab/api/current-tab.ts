@@ -13,8 +13,10 @@ const completeSchema = PreprocessSchema(completeTabInfoSchema);
 const defaultSchema = PreprocessSchema(tabInfoSchema);
 
 async function currentTab(): Promise<TabInfo> {
-  const result = getCurrentTab((tab) => completeSchema.safeParse(tab).success);
-  
+  const result = await getCurrentTab(
+    (tab) => completeSchema.safeParse(tab).success,
+  );
+
   return defaultSchema.parse(result);
 }
 

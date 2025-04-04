@@ -8,10 +8,10 @@ export default function createChromeStorageLocalPersister(
 ) {
   return {
     persistClient: async (client: PersistedClient) => {
-      await chrome.storage.local.set({ [key]: client });
+      await chrome.storage.local.set({ [key]: JSON.stringify(client) });
     },
-    restoreClient: async () => {
-      return (await chrome.storage.local.get(key))[key];
+    restoreClient: async () => {;
+      return JSON.parse((await chrome.storage.local.get(key))[key]);
     },
     removeClient: async () => {
       await chrome.storage.local.remove(key);

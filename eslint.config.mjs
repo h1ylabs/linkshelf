@@ -93,7 +93,7 @@ export default ts.config(
 
   // Ignore
   {
-    ignores: ["node_modules/**", "build/**", "*.config.mjs"],
+    ignores: ["node_modules/**", "build/**", "*.config.mjs", "*.config.ts"],
   },
 
   // Linter

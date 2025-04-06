@@ -3,7 +3,6 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "types": [
-      "vitest/globals",
       "chrome"
     ],
     "lib": [
@@ -40,5 +39,6 @@
     "frontend",
     "backend",
     "core",
+    "build.config.ts"
   ]
 }

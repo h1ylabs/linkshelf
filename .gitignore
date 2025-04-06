@@ -61,7 +61,7 @@ yarn-conditions.yml
 ### React ###
 # React build directory and environment files
 
-build/
+./build
 .env.local
 .env.development.local
 .env.test.local
